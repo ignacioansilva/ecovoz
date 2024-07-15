@@ -485,8 +485,8 @@ h6 {
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
-  background: var(--default-color);
-  color: var(--background-color);
+  background: #0fd2ab;
+  color: var(--default-color);
   transition: 0.3s;
   border-radius: 0 20px 20px 0;
 }
@@ -564,6 +564,10 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
+}
+
+#iconofooter{
+  padding-right: 15px;
 }
 
 .footer .social-links a:hover {
@@ -887,9 +891,11 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/Hero\ EcoVoz\ mwjorado.jpeg") top left;
+  background: url("../img/Hero\ EcoVoz\ Final\ -\ copia.jpg");
   background-position: center;
   background-size: cover;
+  width: 100%;
+  min-height: 555px;
 }
 
 .hero:before {
@@ -927,9 +933,10 @@ section,
 
 .hero .btn-get-started {
   /* border: 2px solid #303A2B; */
-  color: var(--background-color);
+  color: var(--default-color);
   border-color: var(--default-color);
-  background: var(--accent-color);
+  background: #0fd2ab;
+  background-color: #0fd2ab;
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 16px;
@@ -943,7 +950,7 @@ section,
 
 .hero .btn-get-started:hover {
   color: var(--default-color);
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: color-mix(in srgb, var(--background-color), transparent 0%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--contrast-color), transparent 55%);
 }
 
@@ -975,7 +982,7 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -1001,7 +1008,69 @@ section,
   100% {
     transform: translateY(-10px);
   }
+} */
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: start;
+    text-align: center; /* Centra el contenido de texto */
+    background-position: right;
+    background-position: 75%;
+    background-image: url(../img/Hero\ responsive.jpg);
+    height: 620px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 5px;
+  }
+
+  #precio {
+    color: #EDEDED;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+  }
+
+  .hero .btn-get-started {
+    color: #ededed;
+    background: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 18px;
+    /* border-radius: 100px; */
+    transition: 0.5s;
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 90%);
+    /* border: 3.5px solid #FBF1DD; */
+    max-width: 300px; /* Ajusta este valor según tus necesidades */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+  }
+
 }
+
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Featured Services Section
@@ -1017,14 +1086,14 @@ section,
   border-radius: 20px;
 }
 
-.featured-services .service-item:before {
+/* .featured-services .service-item:before {
   content: "";
   position: absolute;
   background: var(--contrast-color);
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
-}
+} */
 
 .featured-services .service-item .icon {
   margin-bottom: 10px;
@@ -1046,10 +1115,11 @@ section,
   margin-top: 15px;
   font-size: 20px;
   text-align: center;
+  color: #EDEDED;
 }
 
 .featured-services .service-item h4 a {
-  color: var(--default-color);
+  color: var(--background-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1059,7 +1129,7 @@ section,
   font-size: 16px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
-  color: var(--default-color);
+  color: var(--background-color);
   text-align: center;
 }
 
@@ -1067,13 +1137,23 @@ section,
 .featured-services .service-item:hover h4 a,
 .featured-services .service-item:hover .icon i,
 .featured-services .service-item:hover p {
-  color: var(--default-color);
+  color: var(--background-color);
 }
 
 .featured-services .service-item:hover:before {
   background: var(--contrast-color);
   inset: 0;
   border-radius: 20px;
+}
+
+
+@media (max-width: 640px){
+  #titulocontenido{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1153,6 +1233,50 @@ section,
   font-size: 20px;
 }
 
+@media(max-width: 640px)  {
+  #imagentalleres{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+  #titulodetalle{
+    text-align: center;
+  }
+
+  #textodetalle{
+    text-align: center;
+  }
+
+  #boton2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  #bajadanosotros{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  #subtitulocurso{
+    text-align: center;
+  }
+
+  #textocurso{
+    text-align: center;
+  }
+
+  #bajadacurso{
+    text-align: center;
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -1194,9 +1318,9 @@ section,
 # Stats Section
 --------------------------------------------------------------*/
 .stats i {
-  background-color: var(--default-color);
-  color: var(--contrast-color);
-  border: 6px solid var(--default-color);
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 100%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 100%);
+  border: 6px color-mix(in srgb, var(--contrast-color), transparent 100%);
   width: 64px;
   height: 64px;
   font-size: 24px;
@@ -1299,7 +1423,7 @@ section,
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
-  color: var(--background-color);
+  color: var(--default-color);
 }
 
 .services .service-item p {
@@ -1307,7 +1431,7 @@ section,
   font-size: 15px;
   margin-bottom: 0;
   font-weight: 500;
-  color: var(--background-color);
+  color: var(--default-color);
 }
 
 .services .service-item:hover {
@@ -1315,7 +1439,7 @@ section,
 }
 
 .services .service-item:hover h3 {
-  color: var(--background-color);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 /*--------------------------------------------------------------
@@ -1699,8 +1823,8 @@ section,
 }
 
 .pricing .btn-buy {
-  background: var(--default-color);
-  color: var(--background-color);
+  background: #0fd2ab;
+  color: var(--default-color);
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border: 2px;
